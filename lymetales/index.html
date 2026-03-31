@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lymetales | Personalized Magic for Your Child</title>
+  <meta name="description" content="Premium personalized children's books. Custom storybooks that make your child the hero.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcement-bar">
+    <span>🐣 EASTER SALE — 20% OFF SITEWIDE + FREE SHIPPING ON ORDERS OVER £40. CODE: <strong>FAIRYTALE</strong></span>
+    <button class="announce-close" id="announce-close" aria-label="Dismiss">✕</button>
+  </div>
+
+  <!-- PRIMARY NAVIGATION -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+
+      <!-- LEFT: Logo -->
+      <a href="#" class="logo">Lymetales.</a>
+
+      <!-- CENTER: Nav links -->
+      <nav class="main-nav desktop-only" aria-label="Primary navigation">
+        <ul>
+          <li class="has-mega">
+            <a href="product.html">Books <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          </li>
+          <li><a href="#">By Age</a></li>
+          <li><a href="#">Occasions</a></li>
+          <li><a href="#">Gifting</a></li>
+          <li><a href="#">Our Story</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Utility icons -->
+      <div class="header-utils">
+        <a href="#" class="util-btn desktop-only" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </a>
+        <a href="#" class="util-btn desktop-only" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="#" class="util-btn util-cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="util-btn mobile-only" id="hamburger-btn" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OUT MENU -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="#" class="logo" style="color: var(--color-green-dark);">Lymetales.</a>
+      <button class="menu-close" id="menu-close-btn" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="product.html">Books</a></li>
+        <li><a href="#">By Age</a></li>
+        <li><a href="#">Occasions</a></li>
+        <li><a href="#">Gifting</a></li>
+        <li><a href="#">Our Story</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="product.html" class="btn-primary full-width">Create Your Book</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- SPLIT-PANEL HERO BANNER (Competitor-Inspired) -->
+    <section class="hero-banner" id="hero">
+
+      <!-- Decorative sparkles -->
+      <span class="sparkle sp1">✦</span>
+      <span class="sparkle sp2">✦</span>
+      <span class="sparkle sp3">✦</span>
+      <span class="sparkle sp4">✦</span>
+      <span class="sparkle sp5">+</span>
+      <span class="sparkle sp6">+</span>
+
+      <!-- LEFT: Text panel -->
+      <div class="hero-panel-left fade-up">
+        <div class="hero-arch-text">
+          <svg viewBox="0 0 200 80" width="200" aria-hidden="true">
+            <path id="arch" d="M 10,70 A 90,90 0 0,1 190,70" fill="none"/>
+            <text font-family="Montserrat, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#0F4C3A" text-anchor="middle">
+              <textPath href="#arch" startOffset="50%">MAKE PRECIOUS ♥</textPath>
+            </text>
+          </svg>
+        </div>
+        <h1 class="hero-heading">Easter<br>memories</h1>
+        <p class="hero-tagline">WITH PERSONAL GIFTS</p>
+        <div class="hero-ctas">
+          <a href="product.html" class="btn-hero-primary">Personalize Now</a>
+          <a href="product.html" class="hero-link-secondary">Shop All Books</a>
+        </div>
+      </div>
+
+      <!-- CENTER: Lifestyle photo with floating book on top -->
+      <div class="hero-panel-photo">
+        <img src="assets/hero_lifestyle.png" alt="Father and baby reading an Easter personalized book" class="hero-photo">
+        <!-- Floating book mockup -->
+        <a href="product.html" class="hero-floating-book" aria-label="View My First Easter Egg Hunt">
+          <img src="assets/book_1.png" alt="Easter personalized book cover">
+          <div class="hero-book-badge">
+            <span>Starring<br>their<br><strong>name!</strong></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Carousel dots -->
+      <div class="hero-dots">
+        <span class="dot dot-active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <!-- Carousel nav arrows -->
+      <button class="hero-arrow hero-arrow-prev" aria-label="Previous slide">‹</button>
+      <button class="hero-arrow hero-arrow-next" aria-label="Next slide">›</button>
+
+    </section>
+
+
+    <!-- GIFTS FOR ALL (4-col category) -->
+    <section class="padding-section">
+      <div class="container">
+        <div class="section-header-left fade-up">
+          <h2>Gifts for all your favourite people</h2>
+          <a href="#" class="explore-arrow" aria-label="Explore all">→</a>
+        </div>
+        <div class="grids grid-4 fade-up delay-1">
+          <a href="product.html" class="category-pill-card">
+            <img src="assets/cat_kids.png" alt="Kids">
+            <span class="pill-btn">Kids</span>
+          </a>
+          <a href="product.html" class="category-pill-card">
+            <img src="assets/cat_siblings.png" alt="Siblings">
+            <span class="pill-btn">Siblings</span>
+          </a>
+          <a href="product.html" class="category-pill-card">
+            <img src="assets/cat_mom.png" alt="Mom">
+            <span class="pill-btn">Mom</span>
+          </a>
+          <a href="product.html" class="category-pill-card">
+            <img src="assets/cat_dad.png" alt="Dad">
+            <span class="pill-btn">Dad</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BADGE -->
+    <div class="trust-badge-center fade-up">
+      <div class="stars">★★★★★</div>
+      <p><strong>4.9 out of 5</strong> — Based on over 15,000 Google Reviews</p>
+    </div>
+
+    <!-- PRODUCT GRID: Fun Faves -->
+    <section class="padding-section">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <h2>Peek at our fun faves</h2>
+        </div>
+        <div class="grids grid-4 product-grid">
+
+          <article class="product-item fade-up">
+            <a href="product.html" class="product-card bg-pastel-yellow">
+              <img src="assets/book_1.png" alt="Easter Bunny Book">
+            </a>
+            <div class="product-meta">
+              <h3><a href="product.html">Personalized Letters from the Easter Bunny</a></h3>
+              <div class="rating"><span class="stars">★★★★★</span><span class="review-count">(310)</span></div>
+              <span class="price">$19.99</span>
+              <a href="product.html" class="btn-outline-dark">Personalize</a>
+            </div>
+          </article>
+
+          <article class="product-item fade-up delay-1">
+            <a href="product.html" class="product-card bg-pastel-mint">
+              <img src="assets/book_2.png" alt="Lion Book">
+            </a>
+            <div class="product-meta">
+              <h3><a href="product.html">God Loves You! Personalized Book</a></h3>
+              <div class="rating"><span class="stars">★★★★★</span><span class="review-count">(542)</span></div>
+              <span class="price">$29.99</span>
+              <a href="product.html" class="btn-outline-dark">Personalize</a>
+            </div>
+          </article>
+
+          <article class="product-item fade-up delay-2">
+            <a href="product.html" class="product-card bg-pastel-blue">
+              <img src="assets/book_3.png" alt="Teddy Bear Book">
+              <span class="badge badge-yellow">Bestseller</span>
+            </a>
+            <div class="product-meta">
+              <h3><a href="product.html">My Snuggle Bunny Personalized Book</a></h3>
+              <div class="rating"><span class="stars">★★★★★</span><span class="review-count">(817)</span></div>
+              <span class="price">$34.99</span>
+              <a href="product.html" class="btn-outline-dark">Personalize</a>
+            </div>
+          </article>
+
+          <article class="product-item fade-up delay-3">
+            <a href="product.html" class="product-card bg-pastel-pink">
+              <img src="assets/book_4.png" alt="Fairy Tale Book">
+            </a>
+            <div class="product-meta">
+              <h3><a href="product.html">My Very Own Easter Personalized Book</a></h3>
+              <div class="rating"><span class="stars">★★★★★</span><span class="review-count">(124)</span></div>
+              <span class="price">$29.99</span>
+              <a href="product.html" class="btn-outline-dark">Personalize</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PASTEL SPLIT BANNER (Pink) -->
+    <section class="banner-section fade-up">
+      <div class="wave-divider" style="background:#fff; margin-bottom:-1px;">
+        <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+          <path fill="#FDE0D9" d="M0,48 Q360,8 720,32 T1440,8 V48 H0 Z"/>
+        </svg>
+      </div>
+      <div class="banner-content bg-pastel-pink">
+        <div class="banner-inner">
+          <div class="banner-image">
+            <img src="assets/banner_reading.png" alt="Child reading a personalized book">
+          </div>
+          <div class="banner-text">
+            <h2>Thoughtfully made for the people you love most</h2>
+            <p>From names to skin tones, clothing colors to heartfelt dedications — everything is customisable to create a gift uniquely for them.</p>
+            <a href="product.html" class="btn-primary-dark">Shop the story</a>
+          </div>
+        </div>
+      </div>
+      <div class="wave-divider" style="background:#fff; margin-top:-1px;">
+        <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+          <path fill="#FDE0D9" d="M0,0 Q360,40 720,16 T1440,40 V0 H0 Z"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS (Cream bg, 3 steps) -->
+    <section class="how-it-works-section bg-cream fade-up">
+      <div class="wave-divider" style="background:#fff; margin-bottom:-1px;">
+        <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+          <path fill="#FAFAF9" d="M0,48 Q360,8 720,32 T1440,8 V48 H0 Z"/>
+        </svg>
+      </div>
+      <div class="container" style="padding-top: var(--space-16); padding-bottom: var(--space-16);">
+        <div class="section-header-center">
+          <span class="eyebrow">Become a</span>
+          <h2>Legendary gift-giver</h2>
+        </div>
+        <div class="grids grid-3 step-grid">
+
+          <div class="step-card fade-up delay-1">
+            <div class="step-circle">
+              <img src="assets/cat_dad.png" alt="Step 1 – Fill in details">
+              <span class="step-number">1</span>
+            </div>
+            <h3>Fill in a few bits of info</h3>
+          </div>
+
+          <div class="step-card fade-up delay-2">
+            <div class="step-circle">
+              <img src="assets/book_3.png" alt="Step 2 – Preview your book">
+              <span class="step-number">2</span>
+            </div>
+            <h3>Preview personalisation in real time</h3>
+          </div>
+
+          <div class="step-card fade-up delay-3">
+            <div class="step-circle">
+              <img src="assets/cat_siblings.png" alt="Step 3 – Deliver smiles">
+              <span class="step-number">3</span>
+            </div>
+            <h3>Deliver smiles of joy to your favourite child</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="faq-section padding-section fade-up">
+      <div class="container faq-container">
+        <h2>Everything you need to know</h2>
+        <div class="accordion-list">
+
+          <div class="accordion-item open">
+            <button class="accordion-trigger" aria-expanded="true">
+              What details do I need to personalise a book?
+              <span class="icon">⌃</span>
+            </button>
+            <div class="accordion-content">
+              <p>Simply add their name, select a character that looks just like them, and write a heartwarming dedication. We've made personalising a completely unique storybook easier than ever before.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              How do I make a personalised book?
+              <span class="icon">⌃</span>
+            </button>
+            <div class="accordion-content">
+              <p>Choose a story, fill in your personalisation details, preview the book in real-time, and check out. Your book will be printed and dispatched within 1-3 business days!</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              How do I get a discount code?
+              <span class="icon">⌃</span>
+            </button>
+            <div class="accordion-content">
+              <p>Sign up for our newsletter below to receive 20% off your first order directly to your inbox. You can also check for seasonal promotions on our social media channels.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              What is your delivery time?
+              <span class="icon">⌃</span>
+            </button>
+            <div class="accordion-content">
+              <p>Standard delivery takes 5–7 business days. Express delivery (2–3 days) is available at checkout. All orders are printed fresh for every single customer.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WAVE TO NEWSLETTER -->
+  <div class="wave-divider" style="background:#fff; margin-bottom:-1px;">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+      <path fill="#D9F99D" d="M0,48 Q360,8 720,32 T1440,8 V48 H0 Z"/>
+    </svg>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-block bg-pastel-green">
+    <div class="container" style="text-align:center;">
+      <h2>Sign up & receive 20% off your first order</h2>
+      <p style="color: var(--color-muted); margin-bottom: var(--space-6);">Join over 1 million families and never miss a new story.</p>
+      <form action="#" class="newsletter-form-inline">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn-primary-dark">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WAVE TO FOOTER -->
+  <div class="wave-divider" style="background:#0F4C3A; margin-top:-1px;">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+      <path fill="#D9F99D" d="M0,0 Q360,40 720,16 T1440,40 V0 H0 Z"/>
+    </svg>
+  </div>
+
+  <!-- DARK GREEN FOOTER -->
+  <footer class="site-footer bg-dark-green">
+    <div class="container">
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>1-877-444-3319</li>
+            <li>Live Chat</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Rewards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Partners</h4>
+          <ul>
+            <li><a href="#">Resellers</a></li>
+            <li><a href="#">Corporate Gifts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="market-selector">🇺🇸 United States</div>
+        <p class="copyright">&copy; 2026 Lymetales. All Rights Reserved.</p>
+        <div class="social-links-footer">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAB Reward Widget -->
+  <div class="reward-widget">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+    Legendary Gifting Club
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
