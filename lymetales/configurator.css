@@ -183,7 +183,7 @@
 
 /* Name on cover */
 .cfg-cover-name {
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   font-style: italic;
   font-weight: 500;
@@ -293,7 +293,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .cfg-dedication-page::before {
   content: '';
@@ -551,7 +551,7 @@
 
 /* Step title */
 .cfg-step-title {
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.15;
@@ -596,7 +596,7 @@
   display: block;
   width: 100%;
   padding: 16px 52px 16px 18px;
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
   color: #1a1a1a;
@@ -919,7 +919,7 @@
   line-height: 1.4;
 }
 .cfg-upsell-price {
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--color-green-dark);
@@ -979,7 +979,7 @@
   padding-top: 12px;
 }
 .cfg-price-total-val {
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-green-dark);
