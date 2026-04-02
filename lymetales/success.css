@@ -1,0 +1,165 @@
+/* ============================================================
+   LYMETALES — Success Page Styles
+   Emotional payoff and order confirmation
+   ============================================================ */
+
+.success-body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-mint-light);
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.suc-header {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+@media (max-width:768px) { .suc-header { padding: 1.5rem; } }
+
+.suc-logo {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: var(--color-green-dark);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.suc-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.suc-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(14, 27, 21, 0.08);
+  max-width: 640px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ── HERO ── */
+.suc-hero {
+  background: var(--color-green-dark);
+  color: #fff;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.suc-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.suc-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+.suc-sub {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ── DETAILS ── */
+.suc-details {
+  padding: 3rem 2rem;
+}
+
+.suc-order-num {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.suc-order-num strong {
+  color: var(--color-text-dark);
+}
+
+.suc-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #F8F9F5;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.suc-product-img {
+  width: 72px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: -2px 2px 8px rgba(0,0,0,0.1);
+  transform: perspective(600px) rotateY(-15deg);
+}
+
+.suc-product-info h4 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+.suc-product-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ── ACTIONS ── */
+.suc-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.suc-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-green-dark);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1.25rem 2.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(14, 27, 21, 0.15);
+  font-size: 1.05rem;
+}
+.suc-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(14, 27, 21, 0.25);
+}
+
+.suc-btn-secondary {
+  color: #666;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.suc-btn-secondary:hover { color: var(--color-green-dark); }

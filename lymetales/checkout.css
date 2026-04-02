@@ -1,0 +1,437 @@
+/* ============================================================
+   LYMETALES — Checkout Styles
+   Clean, focused one-page checkout UI
+   ============================================================ */
+
+.checkout-body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+}
+
+.chk-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── LEFT MAIN ── */
+.chk-main {
+  flex: 1;
+  padding: 2rem 4rem;
+  background: #fff;
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.chk-header {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.chk-logo {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-green-dark);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.chk-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chk-section {
+  margin-bottom: 2.5rem;
+}
+
+.chk-sec-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.chk-sec-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+.chk-sec-header .chk-sec-title { margin: 0; }
+
+.chk-login-link {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: underline;
+}
+
+.chk-sec-sub {
+  font-size: 0.85rem;
+  color: #666;
+  margin: -0.5rem 0 1rem 0;
+}
+
+/* ── FLOATING LABEL FIELDS ── */
+.chk-form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chk-field {
+  position: relative;
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #fff;
+}
+.chk-form-grid .chk-field { margin-bottom: 0; }
+
+.chk-field.chk-half {
+  flex: 1 1 calc(50% - 0.5rem);
+}
+
+.chk-input {
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: transparent;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.chk-input:focus {
+  outline: none;
+  border-color: var(--color-green-dark);
+  box-shadow: 0 0 0 1px var(--color-green-dark);
+}
+
+.chk-input.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 1px #dc2626;
+}
+
+.chk-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+.chk-input:focus ~ .chk-label,
+.chk-input:not(:placeholder-shown) ~ .chk-label {
+  top: 0.4rem;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* ── UI BITS ── */
+.chk-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.chk-input-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+/* ── METHODS (RADIO CARDS) ── */
+.chk-methods {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chk-method-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #d9d9d9;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.chk-method-card:last-child {
+  border-bottom: none;
+}
+
+.chk-method-card.active {
+  background: #F8F9F5;
+}
+
+.chk-method-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chk-method-name {
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.chk-method-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+.chk-method-price {
+  font-weight: 500;
+}
+
+/* ── PAYMENT METHODS ── */
+.chk-payment-methods {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chk-pay-card {
+  display: block;
+  border-bottom: 1px solid #d9d9d9;
+  background: #fff;
+  transition: background 0.2s;
+}
+.chk-pay-card:last-child {
+  border-bottom: none;
+}
+
+.chk-pay-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.chk-pay-radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+.chk-pay-body {
+  padding: 0 1rem 1rem 1rem;
+  display: none;
+  background: #FAFAFA;
+}
+
+.chk-pay-card.active {
+  background: #F8F9F5;
+}
+.chk-pay-card.active .chk-pay-body {
+  display: block;
+  background: #F8F9F5;
+}
+
+/* ── CTA / PAY BUTTON ── */
+.chk-actions {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chk-btn-pay {
+  width: 100%;
+  background: var(--color-green-dark);
+  color: #fff;
+  border: none;
+  padding: 1.25rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(14, 27, 21, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chk-btn-pay:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(14, 27, 21, 0.25);
+}
+.chk-btn-pay:disabled {
+  background: #ccc;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.chk-trust {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* ── RIGHT SIDEBAR ── */
+.chk-sidebar {
+  flex: 0 0 45%;
+  background: #FAFAFA;
+  padding: 4rem;
+}
+
+.chk-summary-sticky {
+  position: sticky;
+  top: 2rem;
+}
+
+/* Order Item */
+.chk-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chk-item-img-wrap {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chk-item-img {
+  width: 44px;
+  height: auto;
+}
+
+.chk-item-qty {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: rgba(14, 27, 21, 0.6);
+  color: #fff;
+  font-size: 0.75rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.chk-item-details {
+  flex: 1;
+}
+
+.chk-item-title {
+  font-weight: 500;
+  margin: 0 0 0.2rem 0;
+}
+
+.chk-item-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.chk-item-price {
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+/* Bump */
+.chk-bump {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.chk-bump-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.chk-bump-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chk-bump-text strong {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+.chk-bump-text span {
+  font-size: 0.85rem;
+  color: #666;
+}
+.chk-bump-icon {
+  font-size: 1.5rem;
+}
+
+/* Totals */
+.chk-totals {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 1.5rem;
+}
+
+.chk-total-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.chk-final {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  align-items: center;
+}
+
+.chk-total-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.currency {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .chk-container { flex-direction: column-reverse; }
+  .chk-sidebar { flex: none; padding: 2rem; border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .chk-main { padding: 2rem; border-right: none; }
+  .chk-summary-sticky { position: static; }
+}

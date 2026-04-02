@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Lymetales</title>
+  <!-- Base typography and resets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body class="checkout-body">
+
+  <div class="chk-container">
+    
+    <!-- ── LEFT: FORM ── -->
+    <main class="chk-main">
+      <header class="chk-header">
+        <a href="index.html" class="chk-logo"><img src="assets/logo.png" alt="Lymetales Logo" style="height: 48px; width: auto; object-fit: contain;"></a>
+      </header>
+
+      <div class="chk-content">
+        <!-- Contact -->
+        <section class="chk-section">
+          <div class="chk-sec-header">
+            <h2 class="chk-sec-title">Contact</h2>
+            <a href="#" class="chk-login-link">Log in</a>
+          </div>
+          <div class="chk-input-group">
+            <div class="chk-field">
+              <input type="email" id="chkEmail" class="chk-input" required placeholder=" ">
+              <label for="chkEmail" class="chk-label">Email</label>
+            </div>
+            <label class="chk-checkbox-wrap">
+              <input type="checkbox" checked>
+              <span>Email me with news and offers</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Shipping -->
+        <section class="chk-section">
+          <h2 class="chk-sec-title">Shipping address</h2>
+          <div class="chk-form-grid">
+            <div class="chk-field">
+              <input type="text" id="chkCountry" class="chk-input" value="Ireland" required placeholder=" ">
+              <label for="chkCountry" class="chk-label">Country/Region</label>
+            </div>
+            
+            <div class="chk-field chk-half">
+              <input type="text" id="chkFirstName" class="chk-input" required placeholder=" ">
+              <label for="chkFirstName" class="chk-label">First name</label>
+            </div>
+            <div class="chk-field chk-half">
+              <input type="text" id="chkLastName" class="chk-input" required placeholder=" ">
+              <label for="chkLastName" class="chk-label">Last name</label>
+            </div>
+
+            <div class="chk-field">
+              <input type="text" id="chkAddress" class="chk-input" required placeholder=" ">
+              <label for="chkAddress" class="chk-label">Address</label>
+            </div>
+            <div class="chk-field">
+              <input type="text" id="chkAppt" class="chk-input" placeholder=" ">
+              <label for="chkAppt" class="chk-label">Apartment, suite, etc. (optional)</label>
+            </div>
+
+            <div class="chk-field chk-half">
+              <input type="text" id="chkCity" class="chk-input" required placeholder=" ">
+              <label for="chkCity" class="chk-label">City</label>
+            </div>
+            <div class="chk-field chk-half">
+              <input type="text" id="chkPostal" class="chk-input" required placeholder=" ">
+              <label for="chkPostal" class="chk-label">Postal code</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Delivery Method -->
+        <section class="chk-section">
+          <h2 class="chk-sec-title">Delivery method</h2>
+          <div class="chk-methods">
+            <label class="chk-method-card active">
+              <div class="chk-method-info">
+                <input type="radio" name="delivery" value="standard" checked>
+                <div>
+                  <div class="chk-method-name">Standard Delivery</div>
+                  <div class="chk-method-desc">3-5 business days</div>
+                </div>
+              </div>
+              <div class="chk-method-price" id="chkStdPrice">€4.90</div>
+            </label>
+            <label class="chk-method-card">
+              <div class="chk-method-info">
+                <input type="radio" name="delivery" value="express">
+                <div>
+                  <div class="chk-method-name">Express Tracked</div>
+                  <div class="chk-method-desc">1-2 business days</div>
+                </div>
+              </div>
+              <div class="chk-method-price">€9.90</div>
+            </label>
+          </div>
+        </section>
+
+        <!-- Payment -->
+        <section class="chk-section">
+          <h2 class="chk-sec-title">Payment</h2>
+          <p class="chk-sec-sub">All transactions are secure and encrypted.</p>
+          <div class="chk-payment-methods">
+            
+            <label class="chk-pay-card active">
+              <div class="chk-pay-header">
+                <div class="chk-pay-radio">
+                  <input type="radio" name="payment" value="card" checked>
+                  Credit card
+                </div>
+                <div class="chk-pay-icons">💳</div>
+              </div>
+              <div class="chk-pay-body">
+                <div class="chk-field">
+                  <input type="text" id="chkCardNum" class="chk-input" placeholder=" ">
+                  <label for="chkCardNum" class="chk-label">Card number</label>
+                  <div class="chk-input-icon">🔒</div>
+                </div>
+                <div class="chk-form-grid" style="margin-top:1rem;">
+                  <div class="chk-field chk-half">
+                    <input type="text" id="chkExp" class="chk-input" placeholder=" ">
+                    <label for="chkExp" class="chk-label">Expiration date (MM / YY)</label>
+                  </div>
+                  <div class="chk-field chk-half">
+                    <input type="text" id="chkCvc" class="chk-input" placeholder=" ">
+                    <label for="chkCvc" class="chk-label">Security code</label>
+                  </div>
+                </div>
+                <div class="chk-field" style="margin-top:1rem;">
+                  <input type="text" id="chkNameOnCard" class="chk-input" placeholder=" ">
+                  <label for="chkNameOnCard" class="chk-label">Name on card</label>
+                </div>
+              </div>
+            </label>
+
+            <label class="chk-pay-card">
+              <div class="chk-pay-header">
+                <div class="chk-pay-radio">
+                  <input type="radio" name="payment" value="paypal">
+                  PayPal
+                </div>
+              </div>
+            </label>
+
+            <label class="chk-pay-card">
+              <div class="chk-pay-header">
+                <div class="chk-pay-radio">
+                  <input type="radio" name="payment" value="klarna">
+                  Pay Later
+                </div>
+              </div>
+            </label>
+
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <div class="chk-actions">
+          <button class="chk-btn-pay" id="chkPayBtn">
+            <span>Pay Now</span>
+            <span class="btn-spinner" style="display:none;">↻</span>
+          </button>
+          
+          <div class="chk-trust">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            SSL Secure Checkout
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ── RIGHT: SUMMARY ── -->
+    <aside class="chk-sidebar">
+      <div class="chk-summary-sticky">
+        
+        <div class="chk-summary-items" id="chkSummaryItems">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="chk-bump">
+          <label class="chk-bump-label">
+            <input type="checkbox" id="chkGiftWrapToggle">
+            <div class="chk-bump-text">
+              <strong>Make it a perfect gift</strong>
+              <span>Add premium gift wrapping (+€4.90)</span>
+            </div>
+            <div class="chk-bump-icon">🎁</div>
+          </label>
+        </div>
+
+        <div class="chk-totals">
+          <div class="chk-total-line">
+            <span>Subtotal</span>
+            <span id="chkSubtotalVal">€0.00</span>
+          </div>
+          <div class="chk-total-line">
+            <span>Shipping</span>
+            <span id="chkShippingVal">€4.90</span>
+          </div>
+          <div class="chk-total-line chk-final">
+            <span>Total</span>
+            <span class="chk-total-price">
+              <span class="currency">EUR</span>
+              <span id="chkTotalVal">€0.00</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

@@ -11,3 +11,14 @@ __pycache__/
 
 # Logs
 *.log
+
+# Agent & AI
+.agent/
+.gemini/
+
+# Node
+node_modules/
+package-lock.json
+
+# Environment
+.env*

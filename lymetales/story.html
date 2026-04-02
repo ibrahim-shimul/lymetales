@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | Lymetales</title>
+  <meta name="description" content="Discover the story behind Lymetales, a brand dedicated to creating personalized, magical stories for children everywhere.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcement-bar">
+    <span>🐣 EASTER SALE — 20% OFF SITEWIDE + FREE SHIPPING ON ORDERS OVER £40. CODE: <strong>FAIRYTALE</strong></span>
+    <button class="announce-close" id="announce-close" aria-label="Dismiss">✕</button>
+  </div>
+
+  <!-- PRIMARY NAVIGATION -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+
+      <!-- LEFT: Mobile Hamburger (hidden on desktop) -->
+      <button class="util-btn mobile-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+
+      <!-- LOGO -->
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Lymetales Logo" class="nav-brand-img"></a>
+
+      <!-- CENTER: Nav links -->
+      <nav class="main-nav desktop-only" aria-label="Primary navigation">
+        <ul>
+          <li class="has-mega">
+            <a href="product.html">Books <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <!-- MEGA MENU -->
+            <div class="mega-menu">
+              <div class="mega-container">
+                <div class="mega-categories">
+                  <h3>Shop by Category</h3>
+                  <ul>
+                    <li><a href="product.html">For Kids</a></li>
+                    <li><a href="product.html">For Babies & Toddlers</a></li>
+                    <li><a href="product.html">For Occasions</a></li>
+                    <li><a href="product.html">For Grown-Ups</a></li>
+                  </ul>
+                </div>
+                <!-- Featured Preview -->
+                <div class="mega-featured">
+                  <a href="product.html" class="mega-featured-card">
+                    <img src="assets/book_1.png" alt="Featured Book">
+                    <div class="mega-feat-info">
+                      <span class="mega-feat-badge">Bestseller</span>
+                      <h4>My First Easter Egg Hunt</h4>
+                      <p>Personalized magic starring your child.</p>
+                      <span class="mega-feat-link">Shop now →</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="collection-age.html">By Age</a></li>
+          <li><a href="collection-occasions.html">Occasions</a></li>
+          <li><a href="collection-gifting.html">Gifting</a></li>
+          <li><a href="story.html" style="color:var(--color-green-dark); font-weight: 500;">Our Story</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Utility icons -->
+      <div class="header-utils">
+        <button class="util-btn" id="searchTrigger" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <a href="#" class="util-btn desktop-only" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="#" class="util-btn util-cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <button class="search-close" id="searchClose" aria-label="Close search">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="search-input-wrap">
+        <input type="text" class="search-input" placeholder="What are you looking for?" aria-label="Search bar" autocomplete="off">
+      </div>
+      <div class="search-suggestions">
+        <p>Popular searches</p>
+        <div class="search-pills">
+          <a href="#">Easter Books</a>
+          <a href="#">First Birthday</a>
+          <a href="#">Books for Mum</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE SLIDE-OUT MENU -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="#" class="logo"><img src="assets/logo.png" alt="Lymetales Logo" class="nav-brand-img"></a>
+      <button class="menu-close" id="menu-close-btn" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="product.html">Books</a></li>
+        <li><a href="collection-age.html">By Age</a></li>
+        <li><a href="collection-occasions.html">Occasions</a></li>
+        <li><a href="collection-gifting.html">Gifting</a></li>
+        <li><a href="story.html" style="color:var(--color-green-dark); font-weight: 500;">Our Story</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="product.html" class="btn-primary full-width">Create Your Book</a>
+    </div>
+  </div>
+
+  <main class="story-main">
+
+    <!-- 1. HERO SECTION (EMOTIONAL ENTRY) -->
+    <section class="story-hero fade-up">
+      <img src="assets/hero_lifestyle.png" class="story-hero-bg" alt="Father and child reading together">
+      <div class="story-hero-overlay"></div>
+      <div class="story-hero-content container">
+        <h1>Stories That Stay Forever.</h1>
+        <p>Because the finest gifts aren't bought—they're created.</p>
+        <a href="product.html" class="btn-primary-dark">Create Your Story</a>
+      </div>
+    </section>
+
+    <!-- 2. OUR PURPOSE -->
+    <section class="story-purpose container fade-up delay-1">
+      <div class="purpose-inner">
+        <h2>We believe every child deserves to be the hero of their own universe.</h2>
+        <p>Lymetales was born from a simple realization: the stories we tell children shape how they see themselves. We’re not just building books; we are crafting premium emotional experiences that bind families together, helping children realize how unimaginably special they truly are.</p>
+      </div>
+    </section>
+
+    <!-- 3. THE NARRATIVE (ZIG-ZAG) -->
+    <section class="story-narrative container section-padding">
+      <!-- Block A -->
+      <div class="zigzag-row fade-up">
+        <div class="zigzag-image">
+          <img src="assets/page_spread_1.png" alt="Vintage desk with illustrations">
+        </div>
+        <div class="zigzag-content">
+          <span class="eyebrow">How It Started</span>
+          <h3>A gap on the bookshelf.</h3>
+          <p>Several years ago, our founders searched for a truly remarkable gift for a newborn niece. Everything on the market felt mass-produced, lacking the soul and tactile elegance of a genuine heirloom. They realized that personalized gifting had been reduced to a novelty gimmick, printed on cheap paper with generic art.</p>
+          <p>We knew we could do better. We set out to bridge the gap between world-class children's illustration and cutting-edge print-on-demand technology.</p>
+        </div>
+      </div>
+      <!-- Block B -->
+      <div class="zigzag-row reverse fade-up">
+        <div class="zigzag-image">
+          <img src="assets/page_spread_2.png" alt="High quality book binding">
+        </div>
+        <div class="zigzag-content">
+          <span class="eyebrow">Our Standard</span>
+          <h3>Uncompromising Quality</h3>
+          <p>From day one, Lymetales operated on an editorial philosophy. Our paper is sustainably sourced, heavyweight, and formulated to resist tearing. Our illustrators are award-winning artists from around the globe.</p>
+          <p>When a child touches a Lymetales book, they aren't just reading a funny poem with their name in it. They are holding a piece of art that validates their existence on every page.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HOW IT WORKS (SIMPLIFIED) -->
+    <div class="wave-divider" style="background:#fff; margin-bottom:-1px;">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+        <path fill="#FEF9E7" d="M0,48 Q360,8 720,32 T1440,8 V48 H0 Z"/>
+      </svg>
+    </div>
+    <section class="story-how-it-works bg-pastel-yellow section-padding fade-up">
+      <div class="container" style="text-align:center;">
+        <h2 style="margin-bottom:var(--space-12);">Creating Magic in 3 Steps</h2>
+        <div class="how-grid">
+          <div class="how-card fade-up">
+            <div class="how-icon">1</div>
+            <h4>Create your child</h4>
+            <p>Customize hair, skin, and eyes to perfectly capture their unique look.</p>
+          </div>
+          <div class="how-card fade-up delay-1">
+            <div class="how-icon">2</div>
+            <h4>Personalize the story</h4>
+            <p>Add their name and weave it flawlessly through the adventures on the page.</p>
+          </div>
+          <div class="how-card fade-up delay-2">
+            <div class="how-icon">3</div>
+            <h4>Receive a magical book</h4>
+            <p>Delivered worldwide in premium, eco-friendly packaging designed to thrill.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-divider" style="background:#fff; margin-top:-1px;">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+        <path fill="#FEF9E7" d="M0,0 Q360,40 720,16 T1440,40 V0 H0 Z"/>
+      </svg>
+    </div>
+
+    <!-- 5. WHAT MAKES US DIFFERENT -->
+    <section class="story-difference container section-padding fade-up">
+      <div class="section-header-center">
+        <h2>The Lymetales Difference</h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <h4>Custom Empathy</h4>
+          <p>We don't just insert a name. Our stories are psychologically crafted to boost a child's confidence and emotional resilience.</p>
+        </div>
+        <div class="diff-card">
+          <h4>Heirloom Prints</h4>
+          <p>Printed on 200gsm silk paper with reinforced lay-flat binding. These books are designed to be read 10,000 times.</p>
+        </div>
+        <div class="diff-card">
+          <h4>Award-Winning Art</h4>
+          <p>We reject AI art. Every single texture and character is hand-painted by celebrated children's book illustrators.</p>
+        </div>
+        <div class="diff-card">
+          <h4>Sustainable Magic</h4>
+          <p>For every book we print, we plant a tree. We run on 100% renewable energy and carbon-neutral shipping.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SOCIAL PROOF / IMPACT -->
+    <div class="wave-divider" style="background:#fff; margin-bottom:-1px;">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+        <path fill="#D9F99D" d="M0,48 Q360,8 720,32 T1440,8 V48 H0 Z"/>
+      </svg>
+    </div>
+    <section class="story-impact bg-pastel-green section-padding fade-up">
+      <div class="container">
+        <div class="impact-inner">
+          <h2 class="impact-stat">1M+</h2>
+          <p class="impact-text">Families have trusted Lymetales to deliver the most meaningful gift of a child's life.</p>
+          <div class="impact-line"></div>
+          <p class="impact-sub">"A genuine masterpiece. Nothing has ever made my daughter feel more seen."</p>
+        </div>
+      </div>
+    </section>
+    <div class="wave-divider" style="background:#fff; margin-top:-1px;">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+        <path fill="#D9F99D" d="M0,0 Q360,40 720,16 T1440,40 V0 H0 Z"/>
+      </svg>
+    </div>
+
+    <!-- 7. BEHIND THE SCENES -->
+    <section class="story-bts container section-padding fade-up">
+      <div class="section-header-center">
+        <h2>From our studio, to their hands.</h2>
+      </div>
+      <div class="bts-masonry">
+        <img src="assets/banner_reading.png" alt="Artist illustrating" class="bts-img bts-wide fade-up">
+        <img src="assets/review_photo_1.png" alt="Printing press" class="bts-img fade-up delay-1">
+        <img src="assets/review_photo_2.png" alt="Gift packaging ribbon" class="bts-img fade-up delay-2">
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA SECTION -->
+    <section class="banner-section fade-up" style="margin-bottom: 0;">
+      <div class="banner-content bg-pastel-pink">
+        <div class="banner-inner">
+          <div class="banner-image">
+            <img src="assets/banner_reading.png" alt="Child reading a personalized book">
+          </div>
+          <div class="banner-text">
+            <h2>Create something they’ll never forget.</h2>
+            <p>Because the finest gifts aren't bought—they're created.</p>
+            <a href="product.html" class="btn-primary-dark">Create Your Book</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-divider" style="background:#0F4C3A; margin-top:-1px;">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="width:100%;height:48px;">
+        <path fill="#FAFAF9" d="M0,0 Q360,40 720,16 T1440,40 V0 H0 Z"/>
+      </svg>
+    </div>
+
+  </main>
+
+  <!-- PREMIUM BRAND FOOTER -->
+  <footer class="site-footer bg-dark-green">
+    <div class="container">
+      <div class="footer-columns">
+        
+        <!-- COL 1: Shop -->
+        <div class="footer-col">
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Shop <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="product.html">All Books</a></li>
+              <li><a href="collection-age.html">For Babies</a></li>
+              <li><a href="collection-age.html">For Kids</a></li>
+              <li><a href="collection-age.html">For Families</a></li>
+              <li><a href="collection-gifting.html">Gift Cards</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COL 2: Help -->
+        <div class="footer-col">
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Help <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COL 3: Company -->
+        <div class="footer-col">
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Company <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="story.html">About Us</a></li>
+              <li><a href="story.html">Our Story</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COL 4: Legal -->
+        <div class="footer-col">
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Legal <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <div class="market-selector" aria-label="Change Market">
+            🇺🇸 United States (USD)
+          </div>
+          <p class="copyright">&copy; 2026 Lymetales HQ, Inc. All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-bottom-right">
+          <!-- Socials -->
+          <div class="social-links-footer">
+            <a href="#" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+          <!-- Payments -->
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" width="36" height="24">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="46" height="24">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay" width="20" height="24">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

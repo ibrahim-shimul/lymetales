@@ -19,27 +19,58 @@
   <header class="site-header" id="header">
     <div class="header-container">
 
-      <!-- LEFT: Logo -->
-      <a href="#" class="logo">Lymetales.</a>
+      <!-- LEFT: Mobile Hamburger (hidden on desktop) -->
+      <button class="util-btn mobile-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+
+      <!-- LOGO -->
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Lymetales Logo" class="nav-brand-img"></a>
 
       <!-- CENTER: Nav links -->
       <nav class="main-nav desktop-only" aria-label="Primary navigation">
         <ul>
           <li class="has-mega">
             <a href="product.html">Books <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <!-- MEGA MENU -->
+            <div class="mega-menu">
+              <div class="mega-container">
+                <div class="mega-categories">
+                  <h3>Shop by Category</h3>
+                  <ul>
+                    <li><a href="product.html">For Kids</a></li>
+                    <li><a href="product.html">For Babies & Toddlers</a></li>
+                    <li><a href="product.html">For Occasions</a></li>
+                    <li><a href="product.html">For Grown-Ups</a></li>
+                  </ul>
+                </div>
+                <!-- Featured Preview -->
+                <div class="mega-featured">
+                  <a href="product.html" class="mega-featured-card">
+                    <img src="assets/book_1.png" alt="Featured Book">
+                    <div class="mega-feat-info">
+                      <span class="mega-feat-badge">Bestseller</span>
+                      <h4>My First Easter Egg Hunt</h4>
+                      <p>Personalized magic starring your child.</p>
+                      <span class="mega-feat-link">Shop now →</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
-          <li><a href="#">By Age</a></li>
-          <li><a href="#">Occasions</a></li>
-          <li><a href="#">Gifting</a></li>
-          <li><a href="#">Our Story</a></li>
+          <li><a href="collection-age.html">By Age</a></li>
+          <li><a href="collection-occasions.html">Occasions</a></li>
+          <li><a href="collection-gifting.html">Gifting</a></li>
+          <li><a href="story.html">Our Story</a></li>
         </ul>
       </nav>
 
       <!-- RIGHT: Utility icons -->
       <div class="header-utils">
-        <a href="#" class="util-btn desktop-only" aria-label="Search">
+        <button class="util-btn" id="searchTrigger" aria-label="Search">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-        </a>
+        </button>
         <a href="#" class="util-btn desktop-only" aria-label="Account">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
@@ -47,18 +78,35 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
           <span class="cart-count">0</span>
         </a>
-        <button class="util-btn mobile-only" id="hamburger-btn" aria-label="Open menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
       </div>
 
     </div>
   </header>
 
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <button class="search-close" id="searchClose" aria-label="Close search">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="search-input-wrap">
+        <input type="text" class="search-input" placeholder="What are you looking for?" aria-label="Search bar" autocomplete="off">
+      </div>
+      <div class="search-suggestions">
+        <p>Popular searches</p>
+        <div class="search-pills">
+          <a href="#">Easter Books</a>
+          <a href="#">First Birthday</a>
+          <a href="#">Books for Mum</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MOBILE SLIDE-OUT MENU -->
   <div class="mobile-menu-overlay" id="mobile-menu">
     <div class="mobile-menu-header">
-      <a href="#" class="logo" style="color: var(--color-green-dark);">Lymetales.</a>
+      <a href="#" class="logo"><img src="assets/logo.png" alt="Lymetales Logo" class="nav-brand-img"></a>
       <button class="menu-close" id="menu-close-btn" aria-label="Close menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
@@ -66,10 +114,10 @@
     <nav class="mobile-nav">
       <ul>
         <li><a href="product.html">Books</a></li>
-        <li><a href="#">By Age</a></li>
-        <li><a href="#">Occasions</a></li>
-        <li><a href="#">Gifting</a></li>
-        <li><a href="#">Our Story</a></li>
+        <li><a href="collection-age.html">By Age</a></li>
+        <li><a href="collection-occasions.html">Occasions</a></li>
+        <li><a href="collection-gifting.html">Gifting</a></li>
+        <li><a href="story.html">Our Story</a></li>
       </ul>
     </nav>
     <div class="mobile-menu-footer">
@@ -359,11 +407,11 @@
   <!-- NEWSLETTER -->
   <section class="newsletter-block bg-pastel-green">
     <div class="container" style="text-align:center;">
-      <h2>Sign up & receive 20% off your first order</h2>
-      <p style="color: var(--color-muted); margin-bottom: var(--space-6);">Join over 1 million families and never miss a new story.</p>
+      <h2 class="newsletter-heading">Get 10% off your first order</h2>
+      <p style="color: var(--color-muted); margin-bottom: var(--space-8);">Join our community and create magical moments for the children you love.</p>
       <form action="#" class="newsletter-form-inline">
         <input type="email" placeholder="Enter your email address" required>
-        <button type="submit" class="btn-primary-dark">Sign Up</button>
+        <button type="submit" class="btn-primary-dark">Subscribe</button>
       </form>
     </div>
   </section>
@@ -375,64 +423,104 @@
     </svg>
   </div>
 
-  <!-- DARK GREEN FOOTER -->
+  <!-- PREMIUM BRAND FOOTER -->
   <footer class="site-footer bg-dark-green">
     <div class="container">
       <div class="footer-columns">
-
+        
+        <!-- COL 1: Shop -->
         <div class="footer-col">
-          <h4>Contact Us</h4>
-          <ul>
-            <li>1-877-444-3319</li>
-            <li>Live Chat</li>
-          </ul>
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Shop <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="product.html">All Books</a></li>
+              <li><a href="collection-age.html">For Babies</a></li>
+              <li><a href="collection-age.html">For Kids</a></li>
+              <li><a href="collection-age.html">For Families</a></li>
+              <li><a href="collection-gifting.html">Gift Cards</a></li>
+            </ul>
+          </div>
         </div>
 
+        <!-- COL 2: Help -->
         <div class="footer-col">
-          <h4>About Us</h4>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Help <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+          </div>
         </div>
 
+        <!-- COL 3: Company -->
         <div class="footer-col">
-          <h4>Customer Care</h4>
-          <ul>
-            <li><a href="#">Track Order</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Shipping Info</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Rewards</a></li>
-          </ul>
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Company <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="story.html">About Us</a></li>
+              <li><a href="story.html">Our Story</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
         </div>
 
+        <!-- COL 4: Legal -->
         <div class="footer-col">
-          <h4>Partners</h4>
-          <ul>
-            <li><a href="#">Resellers</a></li>
-            <li><a href="#">Corporate Gifts</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Accessibility</a></li>
-          </ul>
+          <button class="footer-accordion-trigger" aria-expanded="false">
+            Legal <span class="footer-icon">+</span>
+          </button>
+          <div class="footer-col-content">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
         </div>
 
       </div>
 
+      <!-- FOOTER BOTTOM -->
       <div class="footer-bottom">
-        <div class="market-selector">🇺🇸 United States</div>
-        <p class="copyright">&copy; 2026 Lymetales. All Rights Reserved.</p>
-        <div class="social-links-footer">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
+        <div class="footer-bottom-left">
+          <div class="market-selector" aria-label="Change Market">
+            🇺🇸 United States (USD)
+          </div>
+          <p class="copyright">&copy; 2026 Lymetales HQ, Inc. All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-bottom-right">
+          <!-- Socials -->
+          <div class="social-links-footer">
+            <a href="#" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+          <!-- Payments -->
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" width="36" height="24">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="46" height="24">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay" width="20" height="24">
+          </div>
         </div>
       </div>
     </div>

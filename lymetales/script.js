@@ -25,6 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  // --- Search Overlay toggle ---
+  const searchTrigger = document.getElementById('searchTrigger');
+  const searchOverlay = document.getElementById('searchOverlay');
+  const searchClose = document.getElementById('searchClose');
+  const searchInput = document.querySelector('.search-input');
+
+  searchTrigger?.addEventListener('click', () => {
+    searchOverlay.classList.add('open');
+    setTimeout(() => searchInput?.focus(), 100);
+  });
+  searchClose?.addEventListener('click', () => searchOverlay.classList.remove('open'));
+  searchOverlay?.addEventListener('click', (e) => {
+    if (e.target === searchOverlay) searchOverlay.classList.remove('open');
+  });
+
   // --- Mobile menu toggle ---
   const hamburger = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -55,5 +70,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // --- Mobile Footer Accordion ---
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.footer-accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const col = trigger.closest('.footer-col');
+        const isOpen = col.classList.contains('open');
+
+        // Close all other footer columns
+        document.querySelectorAll('.footer-col').forEach(c => {
+          c.classList.remove('open');
+          c.querySelector('.footer-accordion-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked
+        if (!isOpen) {
+          col.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
 
 });

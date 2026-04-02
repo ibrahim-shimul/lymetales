@@ -1,0 +1,298 @@
+/* ==================== 1. STORY HERO ==================== */
+.story-main {
+  padding-top: 0; /* Let hero bleed under header if transparent, or just start cleanly */
+}
+.story-hero {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  height: 85vh;
+  min-height: 500px;
+  max-height: 580px;
+  margin: var(--space-6) auto;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.story-hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.story-hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 76, 58, 0.4), rgba(15, 76, 58, 0.8));
+  z-index: -1;
+}
+.story-hero-content {
+  color: #fff;
+  max-width: 800px;
+}
+.story-hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.story-hero-content p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  opacity: 0.95;
+}
+
+/* ==================== 2. OUR PURPOSE ==================== */
+.story-purpose {
+  padding: 8rem 0;
+  text-align: center;
+}
+.purpose-inner {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.purpose-inner h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.2;
+  color: var(--color-green-dark);
+  margin-bottom: var(--space-6);
+}
+.purpose-inner p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+/* ==================== 3. THE NARRATIVE (ZIG-ZAG) ==================== */
+.section-padding {
+  padding: 6rem 0;
+}
+.story-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding-bottom: 8rem;
+}
+.zigzag-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6rem;
+}
+.zigzag-row.reverse .zigzag-image {
+  order: 2;
+}
+.zigzag-row.reverse .zigzag-content {
+  order: 1;
+}
+.zigzag-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.zigzag-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.zigzag-image:hover img {
+  transform: scale(1.03);
+}
+.zigzag-content .eyebrow {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-4);
+}
+.zigzag-content h3 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-green-dark);
+  margin-bottom: var(--space-6);
+  line-height: 1.2;
+}
+.zigzag-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+@media(max-width: 900px) {
+  .zigzag-row, .zigzag-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .zigzag-row.reverse .zigzag-image { order: 1; }
+  .zigzag-row.reverse .zigzag-content { order: 2; }
+}
+
+/* ==================== 4. HOW IT WORKS ==================== */
+.story-how-it-works {
+  background: var(--pastel-yellow);
+}
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.how-card {
+  text-align: center;
+}
+.how-icon {
+  width: 80px; height: 80px;
+  margin: 0 auto var(--space-6);
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-green-dark);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.how-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-3);
+  color: var(--color-green-dark);
+}
+.how-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+@media(max-width: 768px) {
+  .how-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* ==================== 5. WHAT MAKES US DIFFERENT ==================== */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.diff-card {
+  padding: 3rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  transition: transform 0.3s;
+}
+.diff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+}
+.diff-card h4 {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-green-dark);
+  margin-bottom: var(--space-3);
+  position: relative;
+  padding-left: 1.5rem;
+}
+.diff-card h4::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10px;
+  width: 8px; height: 8px;
+  background: var(--pastel-green);
+  border-radius: 50%;
+}
+.diff-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+@media(max-width: 768px) {
+  .diff-grid { grid-template-columns: 1fr; }
+}
+
+/* ==================== 6. SOCIAL PROOF / IMPACT ==================== */
+.story-impact {
+  background: var(--pastel-green);
+  text-align: center;
+}
+.impact-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.impact-stat {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1;
+  color: var(--color-green-dark);
+  margin-bottom: var(--space-4);
+}
+.impact-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-green-dark);
+  line-height: 1.4;
+  margin-bottom: var(--space-8);
+}
+.impact-line {
+  width: 80px; height: 2px;
+  background: rgba(15, 76, 58, 0.2);
+  margin: 0 auto var(--space-8);
+}
+.impact-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-style: italic;
+  color: var(--color-green-dark);
+  line-height: 1.3;
+}
+
+/* ==================== 7. BEHIND THE SCENES ==================== */
+.bts-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  gap: 2rem;
+}
+.bts-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease;
+}
+.bts-img:hover {
+  transform: scale(1.02);
+}
+.bts-wide {
+  grid-column: span 2;
+}
+@media(max-width: 900px) {
+  .bts-masonry { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+  .bts-wide { grid-column: span 1; }
+}
+
+/* ==================== 8. FINAL CTA ==================== */
+.bg-cream { background: var(--color-cream); }
+.story-final-cta.section-padding {
+  padding: 8rem 0;
+}

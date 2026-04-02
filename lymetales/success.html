@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | Lymetales</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="success.css">
+</head>
+<body class="success-body">
+
+  <header class="suc-header">
+    <a href="index.html" class="suc-logo"><img src="assets/logo.png" alt="Lymetales Logo" style="height: 48px; width: auto; object-fit: contain;"></a>
+  </header>
+
+  <main class="suc-main">
+    <div class="suc-card">
+      
+      <div class="suc-hero">
+        <div class="suc-icon">✨</div>
+        <h1 class="suc-title">Your story is on its way</h1>
+        <p class="suc-sub">Thank you for letting us be part of this special moment. We'll email you a tracking link as soon as it ships.</p>
+      </div>
+
+      <div class="suc-details">
+        <div class="suc-order-num">Order number <strong>#LYM-8492</strong></div>
+        
+        <div class="suc-product">
+          <img src="assets/book_1.png" alt="Book cover" class="suc-product-img">
+          <div class="suc-product-info">
+            <h4 id="sucBookTitle">My First Easter Egg Hunt</h4>
+            <p id="sucBookMeta">Starring your child</p>
+          </div>
+        </div>
+
+        <div class="suc-actions">
+          <a href="index.html" class="suc-btn-primary">
+            Create another book
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <a href="index.html" class="suc-btn-secondary">Return to home</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Small script to read local storage just for name -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const raw = localStorage.getItem('lymetales_cart');
+        if (raw) {
+          const data = JSON.parse(raw);
+          if (data && data.book) {
+            document.getElementById('sucBookMeta').innerHTML = 
+              `Starring ${data.book.name || 'your child'} (${data.book.hardcover ? 'Hardcover' : 'Softcover'})`;
+          }
+          // Clear cart so next session is fresh
+          localStorage.removeItem('lymetales_cart');
+        }
+      } catch(e){}
+    });
+  </script>
+</body>
+</html>
